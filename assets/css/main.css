@@ -2628,7 +2628,7 @@ Image carousel ------------*/
   color: #fff;
   margin-bottom: 30px;
   padding-bottom: 30px;
-  font-size: 46px;
+  font-size: 63px;
   font-weight: 700;
   position: relative;
 }
@@ -2640,7 +2640,7 @@ Image carousel ------------*/
 
 }
 
-.hero h2 {
+.hero .info1 h2 {
   color: #fff;
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -2649,16 +2649,46 @@ Image carousel ------------*/
   position: relative;
 }
 
+@media (min-width:1900px) {
+  .hero h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 95px !important;
+    font-weight: 700;
+    white-space: nowrap;
+
+    position: relative;  }
+}
+
+@media (min-width:2200px) {
+  .hero .info1 h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 65px !important;
+    font-weight: 700;
+    position: relative;  }
+}
+/*
+.hero h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  font-size: 86px;
+  font-weight: 700;
+  position: relative;
+}
 .hero .heading-main h2 {
   color: #fff;
   margin-bottom: 30px;
   padding-bottom: 30px;
-  font-size: 60px;
+  font-size: 80px;
     font-weight: 700;
   position: relative;
   white-space: nowrap;
   text-align: center;
-}
+} */
 
 
 .hero h4 {
@@ -2832,6 +2862,19 @@ Testing for ino
     font-size: 20px;
   }
 }
+
+@media (min-width: 2200px) {
+  .custom-box .h2  {
+    font-size: 50px !important;
+  }
+}
+
+@media (min-width: 2200px) {
+  .container-fluid .container-lg .d-flex  {
+    padding:5px !important;
+  }
+}
+
 
 .hero .info1 h2 {
   color: #fff;
@@ -3457,11 +3500,20 @@ Testing for ino
   background-color: var(--color-primary);
 }
 
+
+
+@media (min-width: 2200px) {
+  .about .row{
+    padding: 100px;
+    }}
+
+
 .container-about {
-  width: 40%; /* Set the width of each container to 50% to make them side by side */
+  width: 34%; /* Set the width of each container to 50% to make them side by side */
   padding: 20px; /* Add padding to the containers */
   box-sizing: border-box; /* Include padding and border in the total width */
   float: left; /* Float the containers to make them sit next to each other */
+  padding-right:50px; padding-left:180px;
 }
 
 @media (max-width: 768px) {
@@ -3473,7 +3525,7 @@ Testing for ino
 }
 .container-pubs{
   top: 50%;
-  padding-left: 0px; padding-right:30px; width:58%;
+  padding-left: 0px; padding-right:0px; width:53%;
 }
 
 @media (max-width: 768px) {
