@@ -1713,6 +1713,15 @@ Image carousel ------------*/
 
 }
 
+@media (min-width: 2200px) {
+  .container-carousel .swiper-slide {
+    width: 650px; /* Larger width for large screens */
+    height: 950px; /* Adjusted height to maintain aspect ratio */
+    margin: auto; /* Center the slide if the container allows */
+  }
+}
+
+
 
 
 .swiper-slide-active {
