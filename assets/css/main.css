@@ -889,14 +889,10 @@ section {
 }
 
 .get-started .content p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.get-started .php-email-form {
-  background: #fff;
-  padding: 30px;
-  height: 100%;
-}
+
 
 @media (max-width: 575px) {
   .get-started .php-email-form {
@@ -916,46 +912,7 @@ section {
   margin-bottom: 20px;
 }
 
-.get-started .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
 
-.get-started .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.get-started .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.get-started .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
 
 .get-started .php-email-form input,
 .get-started .php-email-form textarea {
@@ -978,18 +935,8 @@ section {
   padding: 12px 15px;
 }
 
-.get-started .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
 
-.get-started .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
-}
+
 
 @-webkit-keyframes animate-loading {
   0% {
@@ -1673,133 +1620,6 @@ input[type='checkbox'] {
     top: 0;
     right: 0;
   }
-}
-
-
-/*-----------------------
-Image carousel ------------*/
-
-.swiper-container{
-  justify-content: center;
-  width:50%;
-}
-
-.swiper {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.swiper-slide {
-  width: 300px;
-  height: 400px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  filter: blur(1px);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: self-start;
-}
-
-.container-carousel .swiper-slide {
-  width: 400px;
-  height: 600px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: self-start;
-
-}
-
-@media (min-width: 2200px) {
-  .container-carousel .swiper-slide {
-    width: 650px; /* Larger width for large screens */
-    height: 950px; /* Adjusted height to maintain aspect ratio */
-    margin: auto; /* Center the slide if the container allows */
-  }
-}
-
-
-
-
-.swiper-slide-active {
-  filter: blur(0px);
-}
-
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  background: #fff;
-}
-
-.swiper-slide span {
-  text-transform: uppercase;
-  color: #fff;
-  background: #1b7402;
-  padding: 7px 18px 7px 25px;
-  display: inline-block;
-  border-radius: 0 20px 20px 0px;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  font-family: "Open Sans", sans-serif;
-}
-
-.swiper-slide--one span {
-  background: #62667f;
-}
-
-.swiper-slide--two span {
-  background: #087ac4;
-}
-
-.swiper-slide--three span {
-  background: #b45205;
-}
-
-.swiper-slide--four span {
-  background: #087ac4;
-}
-
-
-.swiper-slide--one {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../img/publications/science.jpg")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--two {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../img/publications/Ecology.png")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--three {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../img/publications/ecology_evolution.jpg")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--four {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../img/publications/Ecology_Letters.png")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--five {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../img/publications/Journal_Animal_Ecology.png")
-      no-repeat 50% 50% / cover;
-}
-.swiper-slide--six {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../img/publications/frontiers_ecology.jpg")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-3d .swiper-slide-shadow-left,
-.swiper-3d .swiper-slide-shadow-right {
-  background-image: none;
 }
 
 
@@ -2631,6 +2451,8 @@ Image carousel ------------*/
   font-size: 63px;
   font-weight: 700;
   position: relative;
+  white-space: nowrap;
+
 }
 
 .hero .info h4 {
@@ -2661,8 +2483,17 @@ Image carousel ------------*/
     position: relative;  }
 }
 
-@media (min-width:2200px) {
+@media (min-width:19000px) {
   .hero .info1 h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 65px !important;
+    font-weight: 700;
+    position: relative;  }
+}
+@media (min-width:19000px) {
+  .hero .custom-box  .info1 h2 {
     color: #fff;
     margin-bottom: 30px;
     padding-bottom: 30px;
@@ -2735,6 +2566,21 @@ Image carousel ------------*/
   transition: 0.5s;
   margin: 10px;
   color: #fff;
+  border: 2px solid var(--color-primary);
+}
+
+.get-started .btn-get-started {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  color: white;
+  background: var(--color-primary);
   border: 2px solid var(--color-primary);
 }
 
