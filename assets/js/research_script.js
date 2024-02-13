@@ -1,4 +1,54 @@
 
+var id = '1Uo4v5OnyAjlr7MsAlz8ZsII_mf8TnUy_7Mx1vnfLOBQ';
+var gid = '0';
+var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
+fetch(url)
+  .then(response => response.text())
+  .then(data => document.getElementById("json").innerHTML=myItems(data.substring(47).slice(0, -2))  
+  );
+
+  function myItems(jsonString){
+    var json = JSON.parse(jsonString);
+    var htmlString = '<ul id="publicationList">';
+    console.log(json);
+    
+    json.table.rows.forEach(row => {
+      const title = row.c[0] ? row.c[0].v : "No title available";
+      const author = row.c[1] ? row.c[1].v : "Author information unavailable";
+      const journal = row.c[2] ? row.c[2].v : "Journal information unavailable";
+      const number = row.c[3] && row.c[3].v ? ` ${row.c[3].v}` : ""; 
+      const year = row.c[5] ? row.c[5].v : "Year unavailable";
+      const cid = row.c[6] && row.c[6].v ? row.c[6].v : ""; // Handle missing values more explicitly
+      const pubid = row.c[7] ? row.c[7].v : "Publication ID unavailable";
+      const doiLink = row.c[8] ? row.c[8].v : "url is not available";; // Adjusted to handle full URLs or DOI suffixes
+      const theme = row.c[9] ? row.c[9].v : "No theme available";
+
+      //author = author.replace(/JA Merkle/g, "<strong>JA Merkle</strong>");
+      const boldAuthor = author.replace(/JA Merkle/g, "<strong>JA Merkle</strong>")
+                                .replace(/J Merkle/g, "<strong>J Merkle</strong>")
+                                .replace(/MP Poulin/g, "<strong>MP Poulin</strong>")
+                                .replace(/ER Gelzer/g, "<strong>EL Gelzer</strong>")
+                                .replace(/BS Robb/g, "<strong>BS Robb</strong>")
+                                .replace(/MS Lambert/g, "<strong>MS Lambert</strong>")
+                                .replace(/M Sandoval Lambert/g, "<strong>M Sandoval Lambert</strong>")
+                                .replace(/MP Laforge/g, "<strong>MP Laforge</strong>");
+        const citation = `${boldAuthor}. ${year}. ${title}. ${journal}${number}.`;
+  
+      htmlString += `<li data-year="${year}" data-type="${theme}" data-pubs="${journal.replace(/\s+/g, '-').toLowerCase()}">
+        <h4>
+          <a href="${doiLink}">
+            ${title}
+          </a>
+        </h4>
+        ${citation}
+        <hr />
+      </li>`;
+    });
+  
+    htmlString += '</ul>';
+    return htmlString;
+  }
+  
 
 // Function to filter publications based on selected filter options and search input
 function filterPublications() {

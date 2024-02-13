@@ -397,6 +397,10 @@
                           <option value="2021">2021</option>
                           <option value="2020">2020</option>
                           <option value="2019">2019</option>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
 
                           <!-- Add more years as needed -->
                       </select>
@@ -410,8 +414,8 @@
                       <select class="form-control" id="filterType">
                           <option value="all">All</option>
                           <option value="seasonality">Seasonality</option>
-                          <option value="enviornmental-change">Enviornmental Change</option>
-                          <option value="cognition">Cognition</option>
+                          <option value="habitat-alteration">Habitat Alteration</option>
+                          <option value="memory-and-learning">Memory and Learning</option>
                           <option value="group-behavior">Group Behavior</option>
                           <option value="movement-strategies">Movement Strategies</option>
 
@@ -425,6 +429,8 @@
   
           <!-- Publication list -->
           <ul id="publicationList">
+            <div id="json"></div>
+<!-- 
             <li data-year="2023" data-type="seasonality" data-pubs="journal-of-animal-ecology">
               <h4>
                   <a href="https://doi.org/10.1111/1365-2656.13985">
@@ -453,236 +459,9 @@
               <hr />
             </li>
 
-            <li data-year="2023" data-type="research" data-pubs="nature-communications">
-              <h4>
-                <a  href="">
-                  Migrating mule deer compensate en route for phenological mismatches
-                </a>
-              </h4>
-              Ortega, A.C., E.O. Aikens, <strong>J.A. Merkle</strong>, K.L. Monteith, and M.J. Kauffman. 2023. Migrating mule deer compensate en route for phenological mismatches. Nature Communications 14: 2008.
-              <hr />
-            </li>
 
-            <li data-year="2023" data-type="movement-strategies" data-pubs="bear">
-              <h4>
-                <a href="https://www.journals.uchicago.edu/doi/10.1086/724179">
-                  Where, when, what, and which? Using characteristics of migratory species to inform conservation policy questions. Paper 2 in Economics and Policy for Seasonal Migratory Species Conservation Symposium                </a>
-            </h4>
-              Albers, H.J., K. Kroetz, C. Sims, A. Ando, D. Finnoff, R.D. Horan, R. Liu, E. Nelson, and <strong>J.A. Merkle</strong>. 2023. Where, when, what, and which? Using characteristics of migratory species to inform conservation policy questions. Paper 2 in Economics and Policy for Seasonal Migratory Species Conservation Symposium. Review of Environmental Economics and Policy 17(1): 111-131.
-              <hr />
-            </li>
 
-            <li data-year="2023" data-type="research" data-pubs="ecology-letters">
-              <h4>
-                <a href="https://doi.org/10.1111/ele.14148">
-                  Defining null expectations for animal site fidelity
-                </a>
-              </h4>
-              Picardi, S., B. Abrahms, E.R. Gelzer, T.A. Morrison, T.L. Verzuh, <strong>J.A. Merkle</strong>. 2023. Defining null expectations for animal site fidelity. Ecology Letters 26(1): 157-169.
-              <hr />
-            </li>
-
-            <li data-year="2022" data-type="movement-strategies" data-pubs="bear">
-              <h4>
-                <a href=".html">
-                  Ungulate migrations of the western United States, Volume 3: U.S. Geological Survey Scientific Investigations Report 2022–5088                </a>  
-              </h4>
-              Kauffman, M., Lowrey, B., Berg, J., Bergen, S., Brimeyer, D., Burke, P., Cufaude, T., Cain, J.W., III, Cole, J., Courtemanch, A., Cowardin, M., Cunningham, J., DeVivo, M., Diamond, J., Duvuvuei, O., Fattebert, J., Ennis, J., Finley, D., Fort, J., Fralick, G., Freeman, E., Gagnon, J., Garcia, J., Gelzer, E., Graham, M., Gray, J., Greenspan, E., Hall, L.E., Hendricks, C., Holland, A., Holmes, B., Huggler, K., Hurley, M., Jeffreys, E., Johnson, A., Knox, L., Krasnow, K., Lockyer, Z., Manninen, H., McDonald, M., McKee, J.L., Meacham, J., <strong>Merkle, J.</strong>, Moore, B., Mong, T.W., Nielsen, C., Oates, B., Olsen, K., Olson, D., Olson, L., Pieron, M., Powell, J., Prince, A., Proffitt, K., Reddell, C., Riginos, C., Ritson, R., Robatcek, S., Roberts, S., Sawyer, H., Schroeder, C., Shapiro, J., Simpson, N., Sprague, S., Steingisser, A., Tatman, N., Turnock, B., Wallace, C., and Wolf, L., 2022, Ungulate migrations of the western United States, Volume 3: U.S. Geological Survey Scientific Investigations Report 2022–5088, 114 p.
-              <hr />
-            </li>
-
-            <li data-year="2022" data-type="research" data-pubs="frontiers-in-ecology-and-evolution">
-              <h4>
-                <a href=".html">
-                  Site fidelity as a maladaptive behavioral strategy in the Anthropocene
-                </a>  
-              </h4>
-              <strong>Merkle, J.A.</strong>, B. Abrahms, D.P. Costa, A.D. Chalfoun, and H. Sawyer. 2022. Site fidelity as a maladaptive behavioral strategy in the Anthropocene. Frontiers in Ecology and the Environment 20(3): 187-194.
-           <hr />
-            </li>
-
-            <li data-year="2022" data-type="research" data-pubs="journal-of-wildlife-management">
-              <h4>
-                <a href="https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.22214">
-                  Getting cited early: influence of visibility strategies, structure, and focal system on early citation rates
-                </a>
-              </h4>
-              Gelzer, E.R., M.P. Laforge, J.A. Becker, N.P. Hough, M.S. Lambert, M-P. Poulin, R. Thomas-Kuzilik, T.L. Verzuh, and <strong>J.A. Merkle</strong>. 2022. Getting cited early: influence of visibility strategies, structure, and focal system on early citation rates. Journal of Wildlife Management 86(4): e22214.                  </p>
-            <hr />
-            </li>
-
-            <li data-year="2022" data-type="environmental-change" data-pubs="journal-of-wildlife-management">
-              <h4>
-                <a href="https://doi.org/10.1002/jwmg.22212">
-                  Nowhere to run: pronghorn space use impacted by semi-permeability of barriers
-                </a>
-              </h4>
-              Robb, B., <strong>J.A. Merkle</strong>, H. Sawyer, J.L. Beck, and M.J. Kauffman. 2022. Nowhere to run: pronghorn space use impacted by semi-permeability of barriers. Journal of Wildlife Management 86(4): e22212.                  
-              <hr />
-            </li>
-
-            <li data-year="2021" data-type="research" data-pubs="frontiers-in-ecology-and-evolution">
-              <h4>
-                <a href="https://doi.org/10.3389/fevo.2021.681704">
-                  Learning and animal movement
-                </a>
-              </h4>
-              Lewis, M.A., W.F. Fagan, M. Auger-Méthé, J. Frair, J. Fryxell, C. Gros, E. Gurarie, S. Healy, and <strong>J.A. Merkle</strong>. 2021. Learning and animal movement. Frontiers in Ecology and Evolution 9: 441. (download)                    </p>
-              <hr />
-            </li>
-
-            <li data-year="2021" data-type="research" data-pubs="ecology-letters">
-              <h4>
-                <a href="https://doi.org/10.3389/fevo.2021.681704">
-                  Body size and digestive system shape resource selection by ungulates: a cross-taxa test of the Forage Maturation Hypothesis
-                </a>
-              </h4>
-              Esmaeili, S., B.R. Jesmer, S.E. Albeke, E.O. Aikens, K.A. Schoenecker, S.R.B. King, B. Abrahms, B Buuveibaatar, J.L. Beck, R.B. Boone, F. Cagnacci, S. Chamaillé-Jammes, B. Chimeddorj, P.C. Cross, N. Dejid, J. Enkhbyar, I.R. Fischhoff, A.T. Ford, K. Jenks, M-R. Hemami, J.D. Hennig, T.Y. Ito, P. Kaczensky, M.J. Kauffman, J.D.C. Linnell, B. Lkhagvasuren, J.F. McEvoy, J. Melzheimer, <strong>J.A. Merkle</strong>, T. Mueller, J. Muntifering, A. Mysterud, K.A. Olson, M. Panzacchi, J.C. Payne, L. Pedrotti, G.R. Rauset, D.I. Rubenstein, H. Sawyer, J.D. Scasta, J. Signer, M. Songer, J.A. Stabach, S. Stapleton, O. Strand, S.R. Sundaresan, D. Usukhjargal, G. Uuganbayar, J.M. Fryxell, J.R. Goheen. 2021. Body size and digestive system shape resource selection by ungulates: a cross-taxa test of the Forage Maturation Hypothesis. Ecology Letters 24(10): 2178-2191. (request reprint)                    </p>
-              <hr />
-            </li>
-
-            <li data-year="2021" data-type="research" data-pubs="ecosphere">
-              <h4>
-                <a href="https://doi.org/10.1002/ecs2.3773">
-                  Responses of American black bears to spring resources
-                </a>
-              </h4>
-              Bowersock, N.R., A.R. Litt, <strong>J.A. Merkle</strong>, K.A. Gunther, and F.T. van Manen. 2021. Responses of American black bears to spring resources. Ecosphere 12(11): e03773. (request reprint)                    </p>
-              <hr />
-            </li>
-
-            <li data-year="2021" data-type="movement-strategies" data-pubs="bear">
-              <h4>
-                <a href="https://www.science.org/doi/10.1126/science.abf0998">
-                  Mapping out a future for ungulate migrations
-                </a>
-              </h4>
-              Kauffman, M.J., F. Cagnacci, S. Chamaillé-Jammes, M. Hebblewhite, J.G.C. Hopcraft, <strong>J.A. Merkle</strong>, T.Mueller, A. Mysterud, W. Peters, C. Roettger, A. Steingisser, J.E. Meacham, K. Abera, J. Adamczewski, E.O. Aikens, H. Bartlam-Brooks, E. Bennitt, J. Berger, C. Boyd, S.D. Côté, L. Debeffe, A.S. Dekrout, N. Dejid, E. Donadio, L.Dziba, W.F. Fagan, C. Fischer, S. Focardi, J.M. Fryxell, R.W. S. Fynn, C. Geremia, B.A. González, A. Gunn, E. Gurarie, M. Heurich, J. Hilty, M. Hurley, A. Johnson, K. Joly, P. Kaczensky, C.J. Kendall, P. Kochkarev, L. Kolpaschikov, R. Kowalczyk, F. van Langevelde, B.V. Li, A.L. Lobora, A. Loison, T.H. Madiri, D. Mallon, P. Marchand, R.A. Medellin, E. Meisingset, E. Merrill, A.D. Middleton, K.L. Monteith, M. Morjan, T.A. Morrison, S. Mumme, R. Naidoo, A. Novaro, J.O. Ogutu, K.A. Olson, A. Oteng-Yeboah, R.J.A. Ovejero, N. Owen-Smith, A. Paasivaara, C. Packer, D. Panchenko, L. Pedrotti, A.J. Plumptre, C.M. Rolandsen, S. Said, A. Salemgareyev, A. Savchenko, P. Savchenko, H. Sawyer, M. Selebatso, M. Skroch, E. Solberg, J.A. Stabach, O. Strand, M.J. Suitor, Y. Tachiki, A. Trainor, A. Tshipa, M.Z. Virani, C. Vynne, S. Ward, G. Wittemyer, W. Xu, and S. Zuther. 2021. Mapping out a future for ungulate migrations. Science 372(6542): 566-569. (request reprint)
-              <hr />
-            </li>
-
-            <li data-year="2021" data-type="research" data-pubs="journal-of-animal-ecology">
-              <h4>
-                <a href="https://doi.org/10.1111/1365-2656.13425">
-                  Drivers of site fidelity in ungulates
-                </a>
-              </h4>
-              Morrison, T.A., <strong>J.A. Merkle</strong>, J.G.C. Hopcraft, E.O. Aikens, J.L. Beck, R.B. Boone, A.B. Courtemanch,Morrison et al. JANE cover image S.P. Dwinnell, W.S. Fairbanks, A.D. Middleton, K.L. Monteith, B.A. Oates, L. Riotte-Lambert, H. Sawyer, K.T. Smith, J.A. Stabach, K.L. Taylor, M.J. Kauffman. 2021. 2021. Drivers of site fidelity in ungulates. Journal of Animal Ecology 90(4) 955-966. (download)                    </p>
-              <hr />
-            </li>
-
-            <li data-year="2021" data-type="research" data-pubs="journal-of-animal-ecology">
-              <h4>
-                <a href="https://doi.org/10.1111/1365-2656.13425">
-                  Elk migration influences the risk of disease spillover in the Greater Yellowstone Ecosystem
-                </a>
-              </h4>
-              Rayl, N.D., <strong>J.A. Merkle</strong>, K.M. Proffitt, E.S. Almberg, J.D. Jones, J.A. Gude, and P.C. Cross. 2021. Elk migration influences the risk of disease spillover in the Greater Yellowstone Ecosystem. Journal of Animal Ecology in press. (download)                    </p>
-              <hr />
-            </li>
-
-            <li data-year="2020" data-type="research" data-pubs="trends-in-ecology-and-evolution">
-              <h4>
-                <a href="https://doi.org/10.1016/j.tree.2020.10.018">
-                  Emerging perspectives on resource tracking and animal movement
-                </a>
-              </h4>
-              Abrahms, B., E.O. Aikens, J.B. Armstrong, W.W. Deacy, M.J. Kauffman, and <strong>J.A. Merkle</strong>. 2020. Emerging perspectives on resource tracking and animal movement. Trends in Ecology and Evolution 36(4): 308-320. (request reprint)
-              <hr />
-            </li>
-
-            <li data-year="2020" data-type="movement-strategies" data-pubs="usgs">
-              <h4>
-                <a href="https://doi.org/10.3133/sir20205101">
-                  Ungulate migrations of the western United States, Volume 1: U.S. Geological Survey Scientific Investigations Report                </a>
-              </h4>
-              Kauffman, M.J., H.E. Copeland, J. Berg, S. Bergen, E. Cole, M. Cuzzocreo, S. Dewey, J. Fattebert, J. Gagnon, E. Gelzer, C. Geremia, T. Graves, K. Hersey, M. Hurley, J. Kaiser, J. Meacham, J. Merkle, A. Middleton, T. Nuñez, B. Oates, D. Olson, L. Olson, H. Sawyer, C. Schroeder, S. Sprague, A. Steingisser, M. Thonhoff. 2020. Ungulate migrations of the western United States, Volume 1: U.S. Geological Survey Scientific Investigations Report 2020–5101, 119.              <hr />
-            </li>
-
-            <li data-year="2020" data-type="seasonality" data-pubs="remote-sensing">
-              <h4>
-                <a href="https://doi.org/10.3390/rs12162538">
-                  Comparative quality and trend of remotely sensed forage phenology and productivity metrics across the Western United States                </a>
-              </h4>
-              Berman, E.E., T.A. Graves, N.L. Mikle, J.A. Merkle, A.N. Johnston, G.W. Chong. 2020. Comparative quality and trend of remotely sensed forage phenology and productivity metrics across the Western United States. Remote Sensing 12(16): 2538. (request reprint)              <hr />
-            </li>
-
-            <li data-year="2020" data-type="research" data-pubs="landscape-ecology">
-              <h4>
-                <a href="https://link.springer.com/article/10.1007/s10980-020-01072-y">
-                  Temperature shapes movement and habitat selection by a heat-sensitive ungulate                </a>
-              </h4>
-              Alston, J.M., M.J. Joyce, <strong>J.A. Merkle</strong>, and R.A. Moen. 2020. Temperature shapes movement and habitat selection by a heat-sensitive ungulate. Landscape Ecology 35: 1961-1973. (request reprint)              <hr />
-            </li>
-
-            <li data-year="2020" data-type="seasonality" data-pubs="current-biology">
-              <h4>
-                <a href="https://doi.org/10.1016/j.cub.2020.06.032">
-                  Wave-like patterns of plant phenology determine ungulate movement tactics
-                </a>
-              </h4>
-              Aikens, E.O., A. Mysterud, J.A. Merkle, F. Cagnacci, I.M. Rivrud, M. Hebblewhite, M.A. Hurley, W. Peters, S. Bergen, J. De Groeve, S.P.H. Dwinnell, B. Gehr, M. Heurich, A.J.M. Hewison, A. Jarnemo, P. Kjellander, M. Kröschel, A. Licoppe, J.D.C. Linnell, E.H. Merrill, A.D. Middleton, N. Morellet, L. Neufeld, A.C. Ortega, K.L. Parker, L. Pedrotti, K.M. Proffitt, S. Said, H. Sawyer, B.M. Scurlock, J. Signer, P. Stent, P. Šustr, T. Szkorupa, K.L. Monteith and M.J. Kauffman. 2020. Wave-like patterns of plant phenology determine ungulate movement tactics. Current Biology 30(17): 3444-3449. (download)              <hr />
-            </li>
-
-            <li data-year="2020" data-type="seasonality" data-pubs="global-change-biology">
-              <h4>
-                <a href="">
-                  Drought reshuffles plant phenology and reduces the foraging benefit of green-wave surfing for a migratory ungulate
-                </a>
-              </h4>
-              
-              Aikens, E.O., K.L. Monteith, J.A. Merkle, S.P.H. Dwinnell, G.L. Fralick, and M.J. Kauffman. 2020. Drought reshuffles plant phenology and reduces the foraging benefit of green-wave surfing for a migratory ungulate. Global Change Biology 26(8): 4215-4225
-              <hr />
-            </li>
-            <li data-year="2020" data-type="seasonality" data-pubs="journal-of-wildlife-management">
-              <h4>
-                <a href="">
-                  Migratory disturbance thresholds with mule deer and energy development
-                                </a>
-              </h4>
-              
-              Sawyer, H., M.S. Lambert, and J.A. Merkle. 2020. Migratory disturbance thresholds with mule deer and energy development. Journal of Wildlife Management 84(5): 930-937              <hr />
-            </li>
-
-            <li data-year="2020" data-type="seasonality" data-pubs="ecological-applications">
-              <h4>
-                <a href="">
-                  Chronic Wasting Disease Undermines Efforts to Control the Spread of Brucellosis in the Greater Yellowstone Ecosystem
-                  </a>
-              </h4>
-              
-              Maloney, M., J.A. Merkle, D. Aadland, D. Peck, R.D. Horan, K.L. Monteith, T. Winslow, J. Logan, D. Finnoff, and C. Sims. 2020. Chronic Wasting Disease Undermines Efforts to Control the Spread of Brucellosis in the Greater Yellowstone Ecosystem. Ecological Applications 30(6): 1961-1973
-              <hr /> 
-            </li>
-
-              <li data-year="2020" data-type="seasonality" data-pubs="journal-of-wildlife-management">
-                <h4>
-                  <a href="">
-                    Bark Beetle-affected forests provide only a marginal refuge from hunters</a>
-                </h4>
-                
-                Lamont, B.G., M.J. Kauffman, J.A. Merkle, T.W. Mong, M.M. Hayes, K.L. Monteith. 2020. Bark Beetle-affected forests provide only a marginal refuge from hunters. Journal of Wildlife Management 84(3): 413-424     
-                <hr />
-              </li>
-
-              <li data-year="2019" data-type="seasonality" data-pubs="proceedings-of-the-national-academy-of-science">
-                <h4>
-                  <a href="">
-                    Migrating bison engineer the green wave
-                </h4>
-                
-                    Geremia, C., J.A. Merkle, D.R. Eacker, R.L. Wallen, P.J. White, M. Hebblewhite, and M.J. Kauffman. 2019. Migrating bison engineer the green wave. Proceedings of the National Academy of Science 116(51): 25707-25713
-                    <hr />
-                  </li>
-
-              <li data-year="2020" data-type="seasonality" data-pubs="journal-of-applied-ecology">
-                <h4>
-                  <a href="">
-                    Parsing the effects of demography, climate, and management on recurrent brucellosis outbreaks in elk                </h4>
-                
-                    Cotterill, G.G., P.C. Cross, J.A. Merkle, J.D. Rogerson, B.M. Scurlock, and J.T. du Toit. 2020. Parsing the effects of demography, climate, and management on recurrent brucellosis outbreaks in elk. Journal of Applied Ecology 57(2): 379-389
-                    <hr />
-                  </li>
+--> 
 
 
 
