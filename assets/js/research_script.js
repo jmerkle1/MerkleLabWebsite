@@ -34,7 +34,7 @@ fetch(url)
                                 .replace(/MP Laforge/g, "<strong>MP Laforge</strong>");
         const citation = `${boldAuthor}. ${year}. ${title}. ${journal}${number}.`;
   
-      htmlString += `<li data-year="${year}" data-type="${theme}" data-pubs="${journal.replace(/\s+/g, '-').toLowerCase()}">
+      htmlString += `<li data-year="${year}" data-type="${theme.replace(/\s+/g, '-').toLowerCase()}" data-pubs="${journal.replace(/\s+/g, '-').toLowerCase()}">
         <h4>
           <a href="${doiLink}">
             ${title}
@@ -140,7 +140,7 @@ function filterPublications() {
 
       setEnviornmentalButton.addEventListener('click', () => {
         // Set the selected option to 'enviornmental-change'
-        filterTypeSelect.value = 'enviornmental-change';
+        filterTypeSelect.value = 'habitat-alteration';
         filterPublications();
 
         // Scroll to the target section
@@ -148,7 +148,7 @@ function filterPublications() {
     });
 
     setCognitionButton.addEventListener('click', () => {
-        filterTypeSelect.value = 'cognition';
+        filterTypeSelect.value = 'memory-and-learning';
         filterPublications();
 
         // Scroll to the target section
