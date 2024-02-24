@@ -4,13 +4,14 @@ var gid = '0';
 var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
 fetch(url)
   .then(response => response.text())
-  .then(data => document.getElementById("json").innerHTML=myItems(data.substring(47).slice(0, -2))  
-  );
+  .then(data => {
+      document.getElementById("json").innerHTML = myItems(data.substring(47).slice(0, -2));
+      populateDropdowns(data.substring(47).slice(0, -2)); // Populate dropdowns after fetching data
+  });
 
-  function myItems(jsonString){
+function myItems(jsonString){
     var json = JSON.parse(jsonString);
     var htmlString = '<ul id="publicationList">';
-    console.log(json);
     
     json.table.rows.forEach(row => {
       const title = row.c[0] ? row.c[0].v : "No title available";
@@ -32,9 +33,8 @@ fetch(url)
                                 .replace(/MS Lambert/g, "<strong>MS Lambert</strong>")
                                 .replace(/M Sandoval Lambert/g, "<strong>M Sandoval Lambert</strong>")
                                 .replace(/MP Laforge/g, "<strong>MP Laforge</strong>");
-        const citation = `${boldAuthor}. ${year}. ${title}. ${journal}${number}.`;
-  
-      htmlString += `<li data-year="${year}" data-type="${theme.replace(/\s+/g, '-').toLowerCase()}" data-pubs="${journal.replace(/\s+/g, '-').toLowerCase()}">
+        const citation = `${boldAuthor}. ${year}. ${title}. ${journal}${number}.`; //.replace(/\s+/g, '-').toLowerCase()
+      htmlString += `<li data-year="${year}" data-type="${theme}" data-pubs="${journal}"> 
         <h4>
           <a href="${doiLink}">
             ${title}
@@ -43,11 +43,55 @@ fetch(url)
         ${citation}
         <hr />
       </li>`;
-    });
-  
+    });  
     htmlString += '</ul>';
     return htmlString;
-  }
+}
+
+function populateDropdowns(jsonString) {
+    var json = JSON.parse(jsonString);
+    var uniqueJournals = new Set();
+    var uniqueYears = new Set();
+    var uniqueThemes = new Set();
+
+    json.table.rows.forEach(row => {
+        const journal = row.c[2] ? row.c[2].v : "Journal information unavailable";
+        const year = row.c[5] ? row.c[5].v : "Year unavailable";
+        const themes = row.c[9] ? row.c[9].v.split(',').map(theme => theme.trim()) : ["No theme available"];
+
+        uniqueJournals.add(journal);
+        uniqueYears.add(year);
+        themes.forEach(theme => uniqueThemes.add(theme));
+    });
+
+    // Add "All" option to each set
+    uniqueJournals.add("All");
+    uniqueYears.add("All");
+    uniqueThemes.add("All");
+
+    populateDropdown("filterPubs", uniqueJournals, "All");
+    populateDropdown("filterYear", uniqueYears, "All");
+    populateDropdown("filterType", uniqueThemes, "All");
+}
+
+
+function populateDropdown(dropdownId, values, defaultOption) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.innerHTML = ""; // Clear existing options
+
+    // Convert the Set to an array and sort it
+    var sortedValues = Array.from(values).sort();
+
+    sortedValues.forEach(value => {
+        var option = document.createElement("option");
+        option.text = value;
+        dropdown.add(option);
+    });
+
+    // Set default option
+    dropdown.value = defaultOption;
+}
+
   
 
 // Function to filter publications based on selected filter options and search input
@@ -58,7 +102,6 @@ function filterPublications() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
     const publicationList = document.getElementById("publicationList");
     const publicationItems = publicationList.querySelectorAll("li");
-
     let visibleCount = 0; // Initialize counter for visible items
 
     publicationItems.forEach((publication) => {
@@ -68,9 +111,9 @@ function filterPublications() {
         const content = publication.textContent.toLowerCase();
 
         if (
-            (filterPubs === "all" || pubs.includes(filterPubs)) &&
-            (filterYear === "all" || filterYear === year) &&
-            (filterType === "all" || type.includes(filterType)) &&
+            (filterPubs === "All" || pubs.includes(filterPubs)) &&
+            (filterYear === "All" || filterYear === year) &&
+            (filterType === "All" || type.includes(filterType)) &&
             (content.includes(searchInput))
         ) {
             publication.style.display = "block";
