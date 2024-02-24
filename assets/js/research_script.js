@@ -36,7 +36,7 @@ function myItems(jsonString){
         const citation = `${boldAuthor}. ${year}. ${title}. ${journal}${number}.`; //.replace(/\s+/g, '-').toLowerCase()
       htmlString += `<li data-year="${year}" data-type="${theme}" data-pubs="${journal}"> 
         <h4>
-          <a href="${doiLink}">
+          <a href="${doiLink}" target ="_blank">
             ${title}
           </a>
         </h4>
