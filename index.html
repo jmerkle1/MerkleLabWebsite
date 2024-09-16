@@ -205,7 +205,16 @@
 
               </div>
             </section><!-- End Call To Action Section -->
-
+            <footer id="footer" class="footer" style="opacity: 0.5; background: transparent; color: #aaa; ">
+              <div class="footer-legal text-center">
+                <div class="container">
+                  <div class="credits">
+                    Designed by <a href="https://bootstrapmade.com/" style="color: #aaa; text-decoration: none;">BootstrapMade</a>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            
 
     <!-- MAP
     <section>
@@ -226,6 +235,17 @@
 
   <div id="preloader"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const footer = document.getElementById('footer');
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        footer.classList.add('visible');
+      } else {
+        footer.classList.remove('visible');
+      }
+    });
+    
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

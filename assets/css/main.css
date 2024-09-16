@@ -1650,19 +1650,68 @@ input[type='checkbox'] {
 
 
 /*popup for team section*/
+.website-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
 
-.status{
-  font-style: italic; font-size: 26px; color: grey; font-weight: lighter;
+.website-link:hover {
+  color: var(--font-primary); /* Darker green on hover */
 }
 
 .email {
-  font-size: 16px;
+  display: block;
+  margin-top: 10px;
+}
+
+.status{
+  font-style: italic; font-size: 20px; color: grey; 
+  color: #555; /* Slightly darker grey for current position */
+  font-weight: 500; /* Semi-bold to emphasize the current role */
+}
+
+.current_position{
+ font-size: 16px; 
+  color: #555; /* Slightly darker grey for current position */
+  font-weight: 500; /* Semi-bold to emphasize the current role */
+  line-height: 0.5 !important; /* Adjust the line spacing here */
+
+}
+
+
+.previous_role{
+  font-size: 18px;
+  color: #888; /* Lighter grey for past role */
+  font-weight: 300; /* Lighter weight to differentiate from current role */}
+
+.email {
+  font-size: 14px;
   color: grey;
   font-weight: medium;
+  padding:5px;
+
+}
+.footer {
+  position: fixed;
+  bottom: -100px; /* Initially hidden */
+  width: 100%;
+  transition: bottom 0.3s ease;
+}
+
+.footer.visible {
+  bottom: 0;
 }
 
 .email i {
   margin-right: 5px; /* Add some spacing between the icon and text */
+  padding:5px;
 }
 
 
