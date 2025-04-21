@@ -118,6 +118,11 @@ Image carousel ------------*/
       url("../img/publications/frontiers_ecology.jpg")
         no-repeat 50% 50% / cover;
   }
+  .swiper-slide--seven {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+      url("../img/publications/current_biology.jpg")
+        no-repeat 50% 50% / cover;
+  }
   
   .swiper-3d .swiper-slide-shadow-left,
   .swiper-3d .swiper-slide-shadow-right {
