@@ -1713,6 +1713,9 @@ input[type='checkbox'] {
   padding:5px;
 }
 
+/* hide by default, show only when .active is applied */
+#team-popup { display: none; }
+#team-popup.active { display: block; }
 
 .popup_wrap{
   position: fixed;
