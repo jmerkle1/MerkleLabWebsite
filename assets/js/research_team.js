@@ -25,8 +25,8 @@ const teamMembers = [
     title: "Postdoc",
     img: "assets/img/team/JulieBrockman.jpg",
     email: "juliacbrockman@gmail.com",
-    website: "",
-    bio: `Julie is a quantitative ecologist specializing in wildlife movement and spatial ecology. Her research explores how environmental and anthropogenic factors shape animal space use and behavior, with a focus on linking individual decision-making to broader population-level patterns. Her work aims to support effective wildlife management and conservation strategies with applied statistical models. Julie holds a Master's in Forestry from Southern Illinois University and (soon) a Ph.D. in Ecology, Evolution, and Conservation Biology from the University of Nevada, Reno. Outside of research, she enjoys running, hiking, and anything else that keeps her dog, Myotis, exhausted and happy.`
+    website: "https://julia-brockman.quarto.pub/",
+    bio: `Julie is a quantitative ecologist specializing in wildlife movement and spatial ecology. Her research explores how environmental and anthropogenic factors shape animal space use and behavior, with a focus on linking individual decision-making to broader population-level patterns. Her work aims to support effective wildlife management and conservation strategies with applied statistical models. Julie holds a Master's in Forestry from Southern Illinois University and a Ph.D. in Ecology, Evolution, and Conservation Biology from the University of Nevada, Reno. Outside of research, she enjoys running, hiking, and anything else that keeps her dog, Myotis, exhausted and happy.`
   },
   {
     id: "team3",
