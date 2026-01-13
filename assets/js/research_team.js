@@ -46,15 +46,7 @@ const teamMembers = [
     website: "",
     bio: `Ashley grew up in California and earned a BS in environmental sciences from the University of California, Berkeley. As an undergraduate, she completed projects studying macroinvertebrate diets under climate change and mule deer responses to development during migrations. Before joining the Merkle Research Group, she worked as a technician with the Oregon Department of Fish and Wildlife studying mule deer fawn survival, and then surveying salmon spawning. Ashley is broadly interested in animal behavior and decision-making, with a specific interest in movement ecology. Her research aims to understand how and why mule deer explore novel habitats. She hopes a clearer understanding of exploration will strengthen management efforts for declining mule deer populations. Outside of research, Ashley loves spending her time hiking, taking care of her houseplants, and decorating her apartment.`
   },
-  {
-    id: "team13",
-    name: "Hannah Qualm",
-    title: "Undergraduate Researcher",
-    img: "assets/img/team/hannah_qualm.jpg",
-    email: "",
-    website: "",
-    bio: `Hannah is currently pursuing a Bachelor’s in Wildlife and Fisheries Biology and Management at the University of Wyoming. Growing up in Buffalo, Wyoming, at the base of the Bighorn Mountains, she has always been passionate about exploring the outdoors. Being around amazing views and bountiful wildlife has cultivated her drive to learn more about wildlife and fisheries management. Hannah is contributing to a study on bison grazing areas in Yellowstone National Park by developing AI tools for detecting species presence in wildlife camera photos. In her free time, Hannah enjoys spending time in the mountains, as well as hiking, fishing, and traveling.`
-  },
+
   {
     id: "team7",
     name: "Ben Robb",
@@ -64,15 +56,7 @@ const teamMembers = [
     website: "",
     bio: `Ben is an ecologist with a special admiration for wildlife movement. Ben joined the Merkle crew in 2023 to lead the science support team for the USDA-NRCS Working Lands for Wildlife program focused on conserving big game migration habitat. He is motivated by finding ways that spatial tools can benefit wildlife management. Ben’s research interests can be found at the intersection of wildlife and anthropogenic landscapes. Ben is from Pittsburgh, PA and completed his B.S. in Biology at Wake Forest University (2015), and M.S. in zoology at University of Wyoming (2020). In his free time, Ben enjoys trail running, biking, kayaking, skiing, and learning guitar.`
   },
-  {
-    id: "team8",
-    name: "Tucker Russell",
-    title: "MS Student",
-    img: "assets/img/team/tucker_russell.png",
-    email: "trusse12@uwyo.edu",
-    website: "",
-    bio: `Tucker grew up in central Wyoming and received his Bachelor’s degree in Zoology and Physiology from the University of Wyoming in 2019. As an undergraduate, Tucker worked on a research project assessing how the presence or absence of the gastrointestinal microbiome influenced severity of Toxoplasma gondii infection in mice. Tucker’s research involves development and optimization of antemortem tests to detect chronic wasting disease (CWD). Additionally, he will assess habitat use and movement ecology of CWD positive and negative mule deer in central Wyoming. When not in the lab or office, Tucker enjoys spending time fly fishing, mountain biking, trail running, skiing, and snapping pictures with his camera.`
-  },
+
   {
     id: "team10",
     name: "Jessie Shapiro",
@@ -100,15 +84,7 @@ const teamMembers = [
     website: "",
     bio: `Lucas grew up in Laramie, Wyoming before venturing to Montana State University to get his bachelor's degree in environmental studies and GIS. After a couple years of work in various conservation jobs, he found a passion for private land conservation during a stint with a land trust in Colorado. In 2022, he returned to school at the University of Wyoming for a master's degree at the Haub School of Environment and Natural Resources, studying methods for prioritizing conservation on working lands based on their water resources. He joined the Merkle Group in 2024 and is excited to contribute to work relating to private land conservation for protecting wildlife and ecosystems. Outside of work, Lucas will typically be found on skis, a bicycle, at one of his favorite fishing holes, or at the local disc golf course, often with his two dogs in tow.`
   },
-  {
-    id: "team14",
-    name: "Ashley Townsend",
-    title: "Research Assistant",
-    img: "assets/img/team/ashley_townsend.png",
-    email: "atownse8@uwyo.edu",
-    website: "",
-    bio: `Ashley grew up in Minnesota and received her Bachelor's degree in fish and wildlife management and biology from the University of Wyoming in 2017. Since then, she has been a research technician for several university studies and state agencies, working mostly with ungulate species. Currently, she is a drone technician for PhD student Anne Scholle. She hopes to pursue a Master's degree in the near future. In her free time, Ashley enjoys backpacking, horseback riding, fly fishing and photography.`
-  },
+
     {
     id: "team16",
     name: "Eric Van Beek",
@@ -169,6 +145,33 @@ const teamList = document.getElementById("teamList");
   // Lab Alumni Section
 
   const labAlumni = [
+      {
+    id: "alumni17",
+    name: "Ashley Townsend",
+    title: "Research Assistant",
+    img: "assets/img/team/ashley_townsend.png",
+    email: "atownse8@uwyo.edu",
+    website: "",
+    bio: `Ashley grew up in Minnesota and received her Bachelor's degree in fish and wildlife management and biology from the University of Wyoming in 2017. Since then, she has been a research technician for several university studies and state agencies, working mostly with ungulate species. Currently, she is a drone technician for PhD student Anne Scholle. She hopes to pursue a Master's degree in the near future. In her free time, Ashley enjoys backpacking, horseback riding, fly fishing and photography.`
+  },
+      {
+    id: "alumni16",
+    name: "Tucker Russell",
+    title: "MS Student",
+    img: "assets/img/team/tucker_russell.png",
+    email: "trusse12@uwyo.edu",
+    website: "",
+    bio: `Tucker grew up in central Wyoming and received his Bachelor’s degree in Zoology and Physiology from the University of Wyoming in 2019. As an undergraduate, Tucker worked on a research project assessing how the presence or absence of the gastrointestinal microbiome influenced severity of Toxoplasma gondii infection in mice. Tucker’s research involves development and optimization of antemortem tests to detect chronic wasting disease (CWD). Additionally, he will assess habitat use and movement ecology of CWD positive and negative mule deer in central Wyoming. When not in the lab or office, Tucker enjoys spending time fly fishing, mountain biking, trail running, skiing, and snapping pictures with his camera.`
+  },
+      {
+    id: "alumni15",
+    name: "Hannah Qualm",
+    title: "Undergraduate Researcher",
+    img: "assets/img/team/hannah_qualm.jpg",
+    email: "",
+    website: "",
+    bio: `Hannah is currently pursuing a Bachelor’s in Wildlife and Fisheries Biology and Management at the University of Wyoming. Growing up in Buffalo, Wyoming, at the base of the Bighorn Mountains, she has always been passionate about exploring the outdoors. Being around amazing views and bountiful wildlife has cultivated her drive to learn more about wildlife and fisheries management. Hannah is contributing to a study on bison grazing areas in Yellowstone National Park by developing AI tools for detecting species presence in wildlife camera photos. In her free time, Hannah enjoys spending time in the mountains, as well as hiking, fishing, and traveling.`
+  },
       {
     id: "alumni14",
     name: "Lucas Olson",
