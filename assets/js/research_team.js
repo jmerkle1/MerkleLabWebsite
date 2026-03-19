@@ -10,6 +10,15 @@ const teamMembers = [
     website: "",
     bio: `Jerod is the Knobloch Professor of Migration Ecology and Conservation within the Department of Zoology and Physiology at University of Wyoming. He is also a research associate with the Wyoming Migration Initiative. Jerod is a quantitative wildlife ecologist with broad interests in understanding how the movement of animals relates to environmental heterogeneity and change, and how these interactions scale to population- and landscape-level ecological processes. Jerod’s specific research foci include movement and migration ecology, fitness consequences of behavior, how cognition and innovation influence foraging behavior, and conservation and management of large mammals.`
   },
+   {
+    id: "team14",
+    name: "Dani Berger",
+    title: "Research Scientist",
+    img: "assets/img/team/dani_berger.jpg",
+    email: "danielle.berger@wyo.gov",
+    website: "",
+    bio: `Dani is an applied quantitative ecologist specializing in wildlife space use and demographic analyses. Her research focuses on understanding the demographic consequences of individual space use, leveraging large animal tracking datasets. She extrapolates the relationships between individual space use, survival, and reproduction to infer population-level demographic outcomes - the target of most wildlife management efforts. Dani’s work integrating wildlife space use and demography helps to maximize the information value of large animal tracking studies for wildlife conservation and management. Currently, Dani works with the Wyoming Game and Fish Department as the analytical lead on a large GPS mule deer monitoring project. Dani holds a B.S. in Wildlife Ecology, Research and Management from the University of Wisconsin – Stevens Point, an M.S. in Applied Ecology from the University of Nebraska – Lincoln, and a PhD in Ecology from Utah State University. When Dani isn’t in research-mode, she can usually be found running – sometimes for fun, but mostly to keep up with her two kids and sassy Shiba Inu.`
+  },
   {
     id: "team4",
     name: "Matt Bowers",
