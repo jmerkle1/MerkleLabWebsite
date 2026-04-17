@@ -55,7 +55,15 @@ const teamMembers = [
     website: "",
     bio: `Ashley grew up in California and earned a BS in environmental sciences from the University of California, Berkeley. As an undergraduate, she completed projects studying macroinvertebrate diets under climate change and mule deer responses to development during migrations. Before joining the Merkle Research Group, she worked as a technician with the Oregon Department of Fish and Wildlife studying mule deer fawn survival, and then surveying salmon spawning. Ashley is broadly interested in animal behavior and decision-making, with a specific interest in movement ecology. Her research aims to understand how and why mule deer explore novel habitats. She hopes a clearer understanding of exploration will strengthen management efforts for declining mule deer populations. Outside of research, Ashley loves spending her time hiking, taking care of her houseplants, and decorating her apartment.`
   },
-
+  {
+    id: "team17",
+    name: "Rick King",
+    title: "Science Partnerships and Strategy Lead",
+    img: "assets/img/team/rick_king.png",
+    email: "Rick.King@uwyo.edu",
+    website: "",
+    bio: `Rick King is the Science Partnerships and Strategy Lead in the Merkle Research Group at the University of Wyoming. He joined the lab in late 2025 after more than 25 years with the Wyoming Game and Fish Department, where he served as Chief of the Wildlife Division and Chief Game Warden. In that role, he led statewide wildlife programs, overseeing a $33 million budget and more than two hundred employees, and worked closely with the Wyoming Game and Fish Commission, Governor’s Office, and Legislature to guide policy and management decisions. His career spans wildlife management, conservation law enforcement, and executive leadership, with a consistent focus on building partnerships and advancing collaborative, science-based wildlife management.`
+  },
   {
     id: "team7",
     name: "Ben Robb",
