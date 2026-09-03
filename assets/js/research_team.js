@@ -83,7 +83,15 @@ const teamMembers = [
     website: "https://www.shapirogis.com",
     bio: `Jessie graduated from the University of Montana with a bachelor’s degree in wildlife biology in 2015. After working numerous field positions ranging from avian studies in Alaska to wolf research in the boundary waters, she decided to center her focus on GIS methods and its applications in wildlife conservation. Jessie completed her GIS certificate in 2017 and received her master’s degree in GIS at the University of Utah in 2021. In her role at the Merkle Research Group, she focuses on the interplay of wildlife migration and GIS, supporting data and development needs and conducting analyses on wildlife movement data. When not tracking wildlife, she enjoys skiing, biking, climbing, and spending time with her husband and dog.`
   },
-  {
+    {
+    id: "team18",
+    name: "Madeline Sorensen",
+    title: "Undergraduate Researcher",
+    img: "assets/img/team/mad_photo.jpg",
+    email: "msoren14@uwyo.edu",
+    bio: `Madeline grew up in Cody, Wyoming, before moving to Laramie to pursue a B.S. in Environment and Natural Resources with a concurrent major in Environmental Systems Science and a minor in Wildlife Biology and Management. She is currently a Wyoming Research Scholar under and is working on a research project investigating habitat correlates of herd-level migration strategies in Wyoming’s mule deer. Outside of her academic work, Madeline enjoys traveling, spending time outside, and arts and crafts. After graduation, she hopes to contribute to wildlife habitat conservation and ultimately pursue graduate education.`
+    },
+    {
     id: "team12",
     name: "Kurt Smith",
     title: "Research Scientist",
@@ -92,15 +100,7 @@ const teamMembers = [
     website: "",
     bio: `Kurt grew up and Pennsylvania and slowly migrated west to pursue opportunities in wildlife ecology and management. He has a B.S. in biology from Mansfield University, an M.S. in fisheries ecology and management from Southern Illinois University and earned his PhD in ecology at the University of Wyoming in 2016. His primary motivation is to bring scientific understanding and management tools that can be applied by resource managers to facilitate species conservation. In his free time, Kurt enjoys many of the seasonal outdoor recreational opportunities that Wyoming has to offer.`
   },
-  {
-    id: "team15",
-    name: "Lucas Thorsness",
-    title: "Research Scientist",
-    img: "assets/img/team/lucas_thorsness.png",
-    email: "lthorsne@uwyo.edu",
-    website: "",
-    bio: `Lucas grew up in Laramie, Wyoming before venturing to Montana State University to get his bachelor's degree in environmental studies and GIS. After a couple years of work in various conservation jobs, he found a passion for private land conservation during a stint with a land trust in Colorado. In 2022, he returned to school at the University of Wyoming for a master's degree at the Haub School of Environment and Natural Resources, studying methods for prioritizing conservation on working lands based on their water resources. He joined the Merkle Group in 2024 and is excited to contribute to work relating to private land conservation for protecting wildlife and ecosystems. Outside of work, Lucas will typically be found on skis, a bicycle, at one of his favorite fishing holes, or at the local disc golf course, often with his two dogs in tow.`
-  },
+
 
     {
     id: "team16",
@@ -162,6 +162,15 @@ const teamList = document.getElementById("teamList");
   // Lab Alumni Section
 
   const labAlumni = [
+      {
+    id: "alumni18",
+    name: "Lucas Thorsness",
+    title: "Research Scientist",
+    img: "assets/img/team/lucas_thorsness.png",
+    email: "lthorsne@uwyo.edu",
+    website: "",
+    bio: `Lucas grew up in Laramie, Wyoming before venturing to Montana State University to get his bachelor's degree in environmental studies and GIS. After a couple years of work in various conservation jobs, he found a passion for private land conservation during a stint with a land trust in Colorado. In 2022, he returned to school at the University of Wyoming for a master's degree at the Haub School of Environment and Natural Resources, studying methods for prioritizing conservation on working lands based on their water resources. He joined the Merkle Group in 2024 and is excited to contribute to work relating to private land conservation for protecting wildlife and ecosystems. Outside of work, Lucas will typically be found on skis, a bicycle, at one of his favorite fishing holes, or at the local disc golf course, often with his two dogs in tow.`
+  },
       {
     id: "alumni17",
     name: "Ashley Townsend",
