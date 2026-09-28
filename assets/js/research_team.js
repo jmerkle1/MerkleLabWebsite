@@ -89,7 +89,7 @@ const teamMembers = [
     title: "Undergraduate Researcher",
     img: "assets/img/team/mad_photo.jpg",
     email: "msoren14@uwyo.edu",
-    bio: `Madeline grew up in Cody, Wyoming, before moving to Laramie to pursue a B.S. in Environment and Natural Resources with a concurrent major in Environmental Systems Science and a minor in Wildlife Biology and Management. She is currently a Wyoming Research Scholar under and is working on a research project investigating habitat correlates of herd-level migration strategies in Wyoming’s mule deer. Outside of her academic work, Madeline enjoys traveling, spending time outside, and arts and crafts. After graduation, she hopes to contribute to wildlife habitat conservation and ultimately pursue graduate education.`
+    bio: `Madeline grew up in Cody, Wyoming, before moving to Laramie to pursue a B.S. in Environment and Natural Resources with a concurrent major in Environmental Systems Science and a minor in Wildlife Biology and Management. She is currently a Wyoming Research Scholar and is working on a research project investigating habitat correlates of herd-level migration strategies in Wyoming’s mule deer. Outside of her academic work, Madeline enjoys traveling, spending time outside, and arts and crafts. After graduation, she hopes to contribute to wildlife habitat conservation and ultimately pursue graduate education.`
     },
     {
     id: "team12",
