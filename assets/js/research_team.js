@@ -110,7 +110,18 @@ const teamMembers = [
     email: "evanbeek@uwyo.edu",
     website: "",
     bio: `Eric grew up in Wisconsin where he earned his BS in wildlife ecology from the University of Wisconsin Stevens Point in 2017. Soon after, he traveled to Delaware, Kentucky, Nebraska, and Idaho where he worked as a wildlife technician for various universities and state agencies. Eric completed his MS at the University of Idaho in 2023, studying moose demography and space use across Idaho before starting his most recent position as a regional wildlife biologist for the Idaho Department of Fish and Game. Currently Eric is a PhD student focused on understanding how the use of virtual fence grazing practices can benefit ungulates, livestock, and the landscapes in which they live.`
+  },
+
+      {
+    id: "team19",
+    name: "George Zaragoza",
+    title: "Resarch Scientist",
+    img: "assets/img/team/george.png",
+    email: "George.Zaragoza@uwyo.edu",
+    website: "",
+    bio: `  George is a quantitative ecologist and conservation geneticist interested in understanding how wildlife populations respond to climate and environmental change. His research has focused on how these changes influence habitat selection, species distributions, landscape connectivity, and movement, as well as how adaptive genetic variation enables populations to respond to changing environmental conditions. He earned his B.S. in Biological Sciences from the University of California, Davis, and his Ph.D. in Integrative and Conservation Biology from the University of Central Florida. Besides research, George also enjoys running, weightlifting, hunting, fishing, playing music, and RPGs.`
   }
+
 ];
 
 
