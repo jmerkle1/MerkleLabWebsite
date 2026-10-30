@@ -115,7 +115,7 @@ const teamMembers = [
       {
     id: "team19",
     name: "George Zaragoza",
-    title: "Resarch Scientist",
+    title: "Research Scientist",
     img: "assets/img/team/george.png",
     email: "George.Zaragoza@uwyo.edu",
     website: "",
