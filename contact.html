@@ -30,6 +30,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/who-hero.css" rel="stylesheet">
+  <link href="assets/css/contact.css" rel="stylesheet">
 
 </head>
 
@@ -72,80 +74,73 @@
   </header><!-- End Header -->
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/31728112187_1102326be5_o.jpg');">
-      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-
-        <h2>Contact</h2>
-
-
-      </div>
-    </div><!-- End Breadcrumbs -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-map"></i>
-              <h3>Our Address</h3>
-              <p style = "text-align: center;">Department of Zoology and Physiology <br>
-                1000 E. University Ave., Dept. 3166,<br>
-                University of Wyoming,
-                Laramie, WY 82071 USA</p>
-                <p>
-                  <br>
-                  <strong>Merkle office:</strong> Biological Sciences Room 422
-                 </p>
-                 <p>
-                  <strong>Research Lab:</strong> Biological Sciences Room 311 and 439
-
-                 </p>
-
-                          </div>
-       
-                          
-
-
-
-
-
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-envelope"></i>
-              <h3>Email Us</h3>
-              <p> jmerkle “at” uwyo.edu</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-telephone"></i>
-              <h3>Call Us</h3>
-              <p>307.766.5448</p>
-            </div>
-          </div><!-- End Info Item -->
-
+    <!-- ======= Contact Cover ======= -->
+    <!-- To change the photo: edit the url(...) on .who-hero--contact in assets/css/contact.css -->
+    <section id="hero" class="who-hero who-hero--contact who-hero--short">
+      <div class="who-hero__content container-fluid container-xl">
+        <div class="who-hero__box">
+          <p class="who-hero__eyebrow">Get in touch</p>
+          <h2 class="who-hero__title">Contact</h2>
+          <p class="who-hero__text" data-aos="fade-up">Questions about our research, joining the lab, or working together? We'd love to hear from you.</p>
+          <div class="who-hero__actions" data-aos="fade-up" data-aos-delay="100">
+            <a href="mailto:jmerkle@uwyo.edu" class="who-hero__btn who-hero__btn--primary">Email Dr. Merkle</a>
+            <a href="#support" class="who-hero__btn who-hero__btn--ghost">Support our work <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
-        
+      </div>
+    </section>
 
-        <div class="row gy-4 mt-1">
+    <!-- ======= Contact Details ======= -->
+    <section id="contact" class="contact-section">
+      <div class="container">
 
-          <div class="col-lg-6 ">
-            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=384&amp;hl=en&amp;q=Google,Biological Sciences Building
-            University of Wyoming, Laramie WY USA&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
-</div><!-- End Google Maps -->
-
-          <div class="col-lg-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <h3>Support Us</h3>
-              <p style = "padding:10px;">Thank you for your interest in supporting our research! You have two options: either support us through the <a target="_blank" href = "https://migrationinitiative.org/join-us/support-our-mission/">Wyoming Migration Initiative</a> or by emailing Jerod Merkle. Thank you!</p>
+        <div class="contact-cards">
+          <div class="contact-card contact-card--wide">
+            <span class="contact-card__icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+            <div>
+              <h3>Our address</h3>
+              <p>Department of Zoology and Physiology<br>
+                1000 E. University Ave., Dept. 3166<br>
+                University of Wyoming, Laramie, WY 82071 USA</p>
+              <dl class="contact-rooms">
+                <div><dt>Merkle office</dt><dd>Biological Sciences, Room 422</dd></div>
+                <div><dt>Research lab</dt><dd>Biological Sciences, Rooms 311 and 439</dd></div>
+              </dl>
             </div>
-          </div><!-- End Contact Form -->
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-card__icon" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:jmerkle@uwyo.edu">jmerkle@uwyo.edu</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-card__icon" aria-hidden="true"><i class="bi bi-telephone"></i></span>
+            <div>
+              <h3>Phone</h3>
+              <p><a href="tel:+13077665448">307.766.5448</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-bottom">
+          <div class="contact-map">
+            <iframe title="Map of the Biological Sciences Building, University of Wyoming" loading="lazy"
+              src="https://maps.google.com/maps?hl=en&amp;q=Biological%20Sciences%20Building%2C%20University%20of%20Wyoming%2C%20Laramie%20WY&amp;z=15&amp;output=embed"></iframe>
+          </div>
+
+          <div class="contact-support" id="support">
+            <p class="lab-eyebrow">Support us</p>
+            <h2>Support our research</h2>
+            <p>Thank you for your interest in supporting our research! You have two options: support us through the Wyoming Migration Initiative, or email Jerod Merkle.</p>
+            <div class="contact-support__actions">
+              <a class="contact-btn" href="https://migrationinitiative.org/join-us/support-our-mission/" target="_blank" rel="noopener">Wyoming Migration Initiative <span aria-hidden="true">↗</span></a>
+              <a class="contact-btn contact-btn--ghost" href="mailto:jmerkle@uwyo.edu">Email Jerod</a>
+            </div>
+          </div>
         </div>
 
       </div>

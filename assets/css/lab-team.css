@@ -1,0 +1,608 @@
+/*--------------------------------------------------------------
+# Meet the Lab
+--------------------------------------------------------------*/
+
+.lab-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.lab-section + .lab-section {
+  padding-top: 40px;
+}
+
+/* ---- Section heading ---- */
+.lab-header {
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+
+.lab-eyebrow {
+  margin: 0 0 10px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a3f24;
+}
+
+.lab-heading {
+  margin: 0 0 14px;
+  font-family: var(--font-primary);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #2e3135;
+}
+
+.lab-intro {
+  margin: 0;
+  font-family: var(--font-default);
+  font-size: 17px;
+  line-height: 1.6;
+  color: #52565e;
+}
+
+/* ---- Card grid ---- */
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 40px 28px;
+}
+
+.lab-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+}
+
+.lab-card__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ebe7dc;
+}
+
+.lab-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.lab-card:focus-visible {
+  outline: 3px solid #9a3f24;
+  outline-offset: 6px;
+  border-radius: 16px;
+}
+
+.lab-card__name {
+  font-family: var(--font-primary);
+  font-size: 19px;
+  font-weight: 700;
+  color: #2e3135;
+}
+
+.lab-card:hover .lab-card__name {
+  color: #9a3f24;
+}
+
+.lab-card__title {
+  font-family: var(--font-default);
+  font-size: 14px;
+  line-height: 1.4;
+  color: #5d6168;
+}
+
+/* ---- Profile modal ---- */
+.lab-modal[hidden] {
+  display: none;
+}
+
+.lab-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000; /* above the header and scroll-top button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.lab-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 24, 19, 0.82);
+}
+
+.lab-modal__dialog {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 980px;
+  max-height: calc(100vh - 64px);
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.lab-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: #2e3135;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.lab-modal__close:hover {
+  background: #f1efe9;
+}
+
+.lab-modal__side {
+  flex: 0 0 36%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 36px;
+  background: #f4f2ec;
+}
+
+.lab-modal__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #e6e2d8; /* shows for a moment while the photo loads */
+}
+
+.lab-modal__frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%; /* favours faces, which sit high in most photos */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lab-modal__frame img.is-loaded {
+  opacity: 1;
+}
+
+.lab-modal__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 48px 48px 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-modal__role {
+  margin: 0 0 8px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a3f24;
+}
+
+.lab-modal__name {
+  margin: 0 0 20px;
+  padding-right: 40px; /* room for the close button */
+  font-family: var(--font-primary);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #2e3135;
+}
+
+.lab-modal__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lab-modal__links[hidden] {
+  display: none;
+}
+
+.lab-modal__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  justify-content: center;
+  border: 1.5px solid #cfcabc;
+  background: #fff;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e3135;
+  transition: 0.3s;
+}
+
+.lab-modal__btn:hover {
+  border-color: #2e3135;
+  color: #2e3135;
+}
+
+.lab-modal__btn--solid {
+  background: #2e3135;
+  border-color: #2e3135;
+  color: #fff;
+}
+
+.lab-modal__btn--solid:hover {
+  background: #9a3f24;
+  border-color: #9a3f24;
+  color: #fff;
+}
+
+.lab-modal__bio {
+  margin: 0 0 24px;
+  font-family: var(--font-default);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #3f444b;
+}
+
+.lab-modal__label {
+  margin: 0 0 10px;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5d6168;
+}
+
+.lab-modal__taglist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.lab-modal__taglist span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f1efe9;
+  font-family: var(--font-default);
+  font-size: 14px;
+  color: #2e3135;
+}
+
+.lab-modal__nav {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #e6e2d8;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.lab-modal__step {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e3135;
+  cursor: pointer;
+}
+
+.lab-modal__step:hover {
+  color: #9a3f24;
+}
+
+/* ---- Small screens: photo on top, everything scrolls ---- */
+@media (max-width: 768px) {
+  .lab-heading {
+    font-size: 36px;
+  }
+
+  .lab-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 16px;
+  }
+
+  .lab-modal {
+    padding: 0;
+  }
+
+  .lab-modal__dialog {
+    flex-direction: column;
+    max-height: 100vh;
+    height: 100%;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .lab-modal__side {
+    flex: none;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 64px 22px 22px;
+  }
+
+  .lab-modal__frame {
+    width: 140px;
+    flex: none;
+  }
+
+  .lab-modal__links {
+    flex: 1 1 auto;
+  }
+
+  .lab-modal__body {
+    overflow: visible;
+    padding: 28px 22px 24px;
+  }
+
+  .lab-modal__name {
+    font-size: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Join Us section
+--------------------------------------------------------------*/
+.join-section {
+  padding: 100px 0;
+  background: #f4f2ec;
+}
+
+.join-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.join-header {
+  max-width: 680px;
+}
+
+.join-header .lab-intro {
+  margin-bottom: 24px;
+}
+
+.join-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+}
+
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: #b84e2f;
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+  background: #9a3f24;
+  color: #fff;
+}
+
+.join-status {
+  font-family: var(--font-default);
+  font-size: 15px;
+  color: #5d6168;
+}
+
+/* Photo mosaic: one large photo, two stacked */
+.join-photos {
+  margin: 0;
+}
+
+.join-photos__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.join-photos__main {
+  flex: 2 1 520px;
+  min-width: 0;
+  height: 440px;
+}
+
+.join-photos__side {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.join-photos__item {
+  flex: 1 1 0;
+  min-height: 200px;
+}
+
+.join-photos__main,
+.join-photos__item {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #e2ddd1; /* shows if a photo is missing */
+}
+
+.join-photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.join-photos figcaption {
+  margin-top: 10px;
+  font-family: var(--font-default);
+  font-size: 13px;
+  color: #6a6e74;
+}
+
+/* Two text panels */
+.join-panels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.join-panel {
+  flex: 1 1 420px;
+  min-width: 0;
+  padding: 30px 32px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.join-panel h3 {
+  margin: 0 0 14px;
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 700;
+  color: #2e3135;
+}
+
+.join-panel p {
+  margin: 0;
+  font-family: var(--font-default);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #3f444b;
+}
+
+/* Download cards */
+.join-docs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.join-doc {
+  flex: 1 1 420px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  border-radius: 16px;
+  border: 1px solid #e3dfd4;
+  background: #fff;
+  color: #2e3135;
+  transition: border-color 0.3s;
+}
+
+.join-doc:hover {
+  border-color: #9a3f24;
+  color: #2e3135;
+}
+
+.join-doc__icon {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-doc__icon--rust {
+  background: #f6e7e1;
+  color: #9a3f24;
+}
+
+.join-doc__icon--sage {
+  background: #e6ece4;
+  color: #4a5a3e;
+}
+
+.join-doc__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.join-doc__text strong {
+  display: block;
+  margin-bottom: 3px;
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.join-doc__text span {
+  font-family: var(--font-default);
+  font-size: 14px;
+  color: #5d6168;
+}
+
+.join-doc__arrow {
+  font-family: var(--font-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .join-section {
+    padding: 72px 0;
+  }
+
+  .join-photos__main {
+    height: 260px;
+  }
+
+  .join-panel {
+    padding: 24px;
+  }
+}
+
+.lab-modal__btn--solid {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.lab-modal__btn--solid span {
+  overflow-wrap: anywhere;
+}

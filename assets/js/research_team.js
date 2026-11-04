@@ -125,52 +125,7 @@ const teamMembers = [
 ];
 
 
-
-const teamList = document.getElementById("teamList");
-  const popupContainer = document.getElementById("popupContainer");
-
-  teamMembers.forEach(member => {
-    // team card
-    teamList.innerHTML += `
-      <div class="column">
-        <div class="team-6">
-          <div class="team-img" data-tab="${member.id}">
-            <img src="${member.img}" alt="Team Image">
-          </div>
-          <div class="team-content">
-            <h2>${member.name}</h2>
-            <h3>${member.title}</h3>
-          </div>
-        </div>
-      </div>
-    `;
-
-    // Popup modal
-    popupContainer.innerHTML += `
-      <div class="popup_wrap" id="${member.id}">
-        <div class="overlay"></div>
-        <div class="popup_box">
-          <div class="close_btn"></div>
-          <div class="left_image">
-            <img src="${member.img}" alt="${member.name}"/>
-          <span class="email">
-            <strong>Email:</strong> ${member.email}
-            ${member.website ? `<br><strong><a href="${member.website}" target="_blank">Visit Website</a></strong>` : ""}
-          </span>
-          </div>
-          <div class="right_content">
-            <h2>${member.name} <br>
-              <span class="status">${member.title}</span>
-            </h2>
-            <p>${member.bio}</p>
-          </div>
-        </div>
-      </div>
-    `;
-  });
-
-
-  // Lab Alumni Section
+  // Lab Alumni
 
   const labAlumni = [
       {
@@ -351,43 +306,152 @@ const teamList = document.getElementById("teamList");
 ];
 
 
-  labAlumni.forEach(member => {
-// Render card
-document.getElementById("alumniList").innerHTML += `
-    <div class="column">
-      <div class="team-6">
-        <div class="team-img" data-tab="${member.id}">
-          <img src="${member.img}" alt="${member.name}" />
+(function () {
+  const groups = { team: teamMembers, alumni: labAlumni };
+
+  // ---- Cards ----
+  function cardHTML(member, group, index) {
+    return `
+      <button type="button" class="lab-card" data-group="${group}" data-index="${index}">
+<span class="lab-card__photo"><img src="${member.img}" alt="" loading="lazy"></span>
+        <span class="lab-card__name">${member.name}</span>
+        <span class="lab-card__title">${member.title}</span>
+      </button>`;
+  }
+
+  document.getElementById("teamList").innerHTML =
+    teamMembers.map((m, i) => cardHTML(m, "team", i)).join("");
+  document.getElementById("alumniList").innerHTML =
+    labAlumni.map((m, i) => cardHTML(m, "alumni", i)).join("");
+
+  // ---- Modal ----
+  document.getElementById("popupContainer").innerHTML = `
+    <div class="lab-modal" id="labModal" hidden>
+      <div class="lab-modal__overlay" data-close></div>
+      <div class="lab-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="labModalName">
+        <button type="button" class="lab-modal__close" aria-label="Close" data-close>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3l12 12M15 3L3 15"/></svg>
+        </button>
+        <div class="lab-modal__side">
+          <div class="lab-modal__frame"><img id="labModalImg" alt=""></div>
+          <div class="lab-modal__links" id="labModalLinks"></div>
         </div>
-        <div class="team-content">
-          <h2>${member.name}</h2>
-          <h3>${member.title}</h3>
+        <div class="lab-modal__body">
+          <p class="lab-modal__role" id="labModalRole"></p>
+          <h2 class="lab-modal__name" id="labModalName"></h2>
+          <p class="lab-modal__bio" id="labModalBio"></p>
+          <div class="lab-modal__tags" id="labModalTags"></div>
+          <div class="lab-modal__nav">
+            <button type="button" class="lab-modal__step" id="labModalPrev"></button>
+            <button type="button" class="lab-modal__step" id="labModalNext"></button>
+          </div>
         </div>
       </div>
-    </div>
-    `;
+    </div>`;
 
+  const modal = document.getElementById("labModal");
+  const el = (id) => document.getElementById(id);
+  let current = { group: "team", index: 0 };
+  let lastFocus = null;
 
-// Render popup
-document.getElementById("alumniPopupContainer").innerHTML += `
-  <div class="popup_wrap" id="${member.id}">
-    <div class="overlay"></div>
-      <div class="popup_box">
-        <div class="close_btn"></div>
-          <div class="left_image">
-          <img src="${member.img}" alt="${member.name}" />
-            <span class="email">
-            ${member.email ? `<strong>Email:</strong> ${member.email}<br>` : ""}
-            ${member.website ? `<strong><a href="${member.website}" target="_blank">Visit Website</a></strong>` : ""}
-            </span>
-          </div>
-          <div class="right_content">
-            <h2>${member.name}<br>
-              <span class="status">${member.title}</span>
-            </h2>
-          <p>${member.bio}</p>
-        </div>
-    </div>
-  </div>
-  `;
-});
+  const mailIcon = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="3" width="13" height="10" rx="2"/><path d="M2 4l6 5 6-5"/></svg>';
+  const webIcon = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13"/></svg>';
+
+  const ready = {};
+  function warm(src) {
+    if (!ready[src]) {
+      const pic = new Image();
+      pic.decoding = "async";
+      pic.src = src;
+      ready[src] = (pic.decode ? pic.decode() : Promise.resolve()).catch(() => {});
+    }
+    return ready[src];
+  }
+
+  function fill(group, index) {
+    const list = groups[group];
+    const m = list[index];
+    current = { group, index };
+
+    const img = el("labModalImg");
+    img.classList.remove("is-loaded");
+    img.alt = m.name;
+    warm(m.img).then(() => {
+      if (groups[current.group][current.index] !== m) return; 
+      img.src = m.img;
+      img.classList.add("is-loaded");
+    });
+    el("labModalRole").textContent = m.title;
+    el("labModalName").textContent = m.name;
+    el("labModalBio").textContent = (m.bio || "").trim();
+
+    let links = "";
+    if (m.email) {
+      links += `<a class="lab-modal__btn lab-modal__btn--solid" href="mailto:${m.email}" title="Email ${m.name}">${mailIcon}<span>${m.email}</span></a>`;
+    }
+    if (m.website) {
+      links += `<a class="lab-modal__btn" href="${m.website}" target="_blank" rel="noopener">${webIcon}<span>Website</span></a>`;
+    }
+    el("labModalLinks").innerHTML = links;
+    el("labModalLinks").hidden = !links;
+
+    const tags = Array.isArray(m.tags) ? m.tags : [];
+    el("labModalTags").innerHTML = tags.length
+      ? `<p class="lab-modal__label">Works on</p><div class="lab-modal__taglist">${tags.map((t) => `<span>${t}</span>`).join("")}</div>`
+      : "";
+
+    const prev = list[(index - 1 + list.length) % list.length];
+    const next = list[(index + 1) % list.length];
+    warm(prev.img);
+    warm(next.img);
+    el("labModalPrev").textContent = "← " + prev.name;
+    el("labModalNext").textContent = next.name + " →";
+
+    modal.querySelector(".lab-modal__body").scrollTop = 0;
+  }
+
+  function open(group, index) {
+    lastFocus = document.activeElement;
+    fill(group, index);
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+    modal.querySelector(".lab-modal__close").focus();
+  }
+
+  function close() {
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+
+  function step(dir) {
+    const len = groups[current.group].length;
+    fill(current.group, (current.index + dir + len) % len);
+  }
+
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".lab-card");
+    if (card) {
+      open(card.dataset.group, Number(card.dataset.index));
+      return;
+    }
+    if (e.target.closest("[data-close]")) close();
+  });
+
+  function warmCard(e) {
+    const card = e.target.closest && e.target.closest(".lab-card");
+    if (card) warm(groups[card.dataset.group][Number(card.dataset.index)].img);
+  }
+  document.addEventListener("pointerover", warmCard, { passive: true });
+  document.addEventListener("focusin", warmCard);
+
+  el("labModalPrev").addEventListener("click", () => step(-1));
+  el("labModalNext").addEventListener("click", () => step(1));
+
+  document.addEventListener("keydown", (e) => {
+    if (modal.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+})();

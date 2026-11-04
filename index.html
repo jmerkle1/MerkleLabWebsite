@@ -31,6 +31,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/slider.css" rel="stylesheet">
+  <link href="assets/css/who-hero.css" rel="stylesheet">
 
 </head>
 
@@ -72,57 +73,23 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
-<!--
-    <div class="info d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2 data-aos="fade-down">Movement and <span>Migration Ecology</span></h2>
-            <p data-aos="fade-up">University of Wyoming</p>
-            <br>
-            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Learn More <span>↓</span> </a>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  <section id="hero" class="who-hero">
+    <video class="who-hero__video" autoplay muted loop playsinline>
+      <source src="drone_edit_20240206.mp4" type="video/mp4">
+    </video>
 
-    </div>
-
-
-    <div class="info d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          
-          <div class="custom-box">
-            
-            <h2 data-aos="fade-down" class = "heading-main" >
-              Movement Ecology <span style="display: block;">and Conservation</span>
-              <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Learn More <span>↓</span></a>
-
-          </h2>
-          
-          
-          </div>
-
+    <!-- container-lg matches this page's header, so the text lines up with the logo -->
+    <div class="who-hero__content container-fluid container-lg">
+      <div class="who-hero__box">
+        <p class="who-hero__eyebrow">University of Wyoming</p>
+        <h2 class="who-hero__title">Movement Ecology and Conservation</h2>
+        <p class="who-hero__text" data-aos="fade-up">Quantitative research rooted in fundamental ecology and ecological theory, conducted to address the needs of wildlife managers and conservation practitioners.</p>
+        <div class="who-hero__actions" data-aos="fade-up" data-aos-delay="100">
+          <a href="#get-started" class="who-hero__btn who-hero__btn--primary">Learn more <span aria-hidden="true">↓</span></a>
+          <a href="about.html#team" class="who-hero__btn who-hero__btn--ghost">Meet the lab</a>
         </div>
       </div>
     </div>
-
-
-
-    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-    <div class="carousel-item active">
-      <div class="video-container">
-        <video autoplay muted loop id="video-background">
-          <source src="drone_edit_20240206.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    
-
   </section><!-- End Hero Section -->
 
   <main id="main">
@@ -247,14 +214,20 @@
   <div id="preloader"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-    window.addEventListener('scroll', function() {
+    // Show the footer at the bottom of the page (checked at most once per frame)
+    (function () {
       const footer = document.getElementById('footer');
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        footer.classList.add('visible');
-      } else {
-        footer.classList.remove('visible');
-      }
-    });
+      let ticking = false;
+      window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () {
+          const atBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2;
+          footer.classList.toggle('visible', atBottom);
+          ticking = false;
+        });
+      }, { passive: true });
+    })();
     
   </script>
 

@@ -1,0 +1,243 @@
+/*--------------------------------------------------------------
+# Page cover (hero) shared by Home, Who We Are and Research
+
+--------------------------------------------------------------*/
+
+.who-hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center; 
+  color: #f2efe8;
+  background: #000;
+  overflow: hidden;
+}
+
+.who-hero--about {
+  background: #2b3528 url("../img/ATDec24_28.jpg") center / cover no-repeat;
+}
+
+/* Background video */
+.who-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.who-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(8, 11, 9, 0.88) 0%,
+      rgba(8, 11, 9, 0.7) 35%,
+      rgba(8, 11, 9, 0.25) 60%,
+      rgba(8, 11, 9, 0) 75%);
+  z-index: 1;
+}
+
+.who-hero--plain::before {
+  display: none;
+}
+
+.who-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 110px; 
+  padding-bottom: 60px;
+}
+
+.who-hero__box {
+  max-width: 560px;
+}
+
+.who-hero__eyebrow {
+  margin: 0 0 16px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e8a184;
+}
+
+.who-hero__title {
+  margin: 0 0 22px;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: clamp(44px, 6vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.who-hero__text {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e4e2da;
+}
+
+.who-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.who-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 0 26px;
+  border-radius: 999px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.who-hero__btn--primary {
+  background: #b84e2f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.who-hero__btn--primary:hover {
+  background: #9a3f24;
+  color: #fff;
+}
+
+.who-hero__btn--ghost {
+  border: 1.5px solid rgba(242, 239, 232, 0.7);
+  color: #f2efe8;
+}
+
+.who-hero__btn--ghost:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.who-hero__text--small {
+  font-size: 16px;
+  color: #b9bcb4;
+}
+
+.who-hero__split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+}
+
+.who-hero__split .who-hero__box {
+  flex: 1 1 440px;
+  min-width: 0;
+}
+
+.who-hero__media {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.who-hero__regions {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(242, 239, 232, 0.2);
+}
+
+.who-hero__regions-label {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b9bdb4;
+}
+
+.who-hero__region-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.who-hero__region {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(31, 39, 30, 0.75);
+  border: 1px solid rgba(242, 239, 232, 0.22);
+  color: #f2efe8;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.who-hero__region:hover {
+  border-color: #e8a184;
+  background: rgba(39, 49, 37, 0.9);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .who-hero__content {
+    padding-top: 100px;
+  }
+
+  .who-hero__text {
+    font-size: 16px;
+  }
+
+  .who-hero::before {
+    background: rgba(8, 11, 9, 0.65);
+  }
+
+  /* Smaller journal covers on phones */
+  .who-hero .container-carousel .swiper-slide {
+    width: 260px;
+    height: 390px;
+  }
+}
+
+.who-hero__credit {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  z-index: 2;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  font-size: 13px;
+  color: #ecebe6;
+}
+
+@media (max-width: 768px) {
+  .who-hero__credit {
+    right: 12px;
+    bottom: 12px;
+    font-size: 12px;
+  }
+}
+
+/* Warm tan background, shared by Research Themes and Join Us */
+.section-tan {
+  background-color: #f4f2ec;
+}
+
+/* Tab underlines a shade warmer so they sit nicely on the tan */
+.section-tan .nav-link {
+  border-bottom-color: #e3dfd4;
+}

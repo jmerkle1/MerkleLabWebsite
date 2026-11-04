@@ -33,6 +33,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/who-hero.css" rel="stylesheet">
+  <link href="assets/css/lab-team.css" rel="stylesheet">
 
 </head>
 
@@ -77,86 +79,116 @@
 
 
 <!-- Page Header End -->
-    <section id="hero" class="hero">
+    <!-- ======= Who We Are ======= -->
+    <!-- To change the photo: edit the url(...) on the .who-hero--about rule in assets/css/who-hero.css -->
+    <section id="who-hero" class="who-hero who-hero--about">
+      <div class="who-hero__content container-fluid container-xl">
+        <div class="who-hero__box">
+<p class="who-hero__eyebrow">Scientists · Postdocs · Students</p>
+          <h2 class="who-hero__title">Who We Are</h2>
+          <p class="who-hero__text" data-aos="fade-up">We are a dynamic ensemble of dedicated individuals, including research scientists, postdocs, graduate students, and undergraduate students. We are all interested in understanding how ecosystems work, in conserving wildlife, habitat, and intact landscapes, and in working with a variety of great partners.</p>
 
-      
-  
-      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-item active" style="position: relative;">
-<!-- Map Container-->
-          <div class="iframe-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1001;">
-                <iframe id="mapFrame" src="study_areas.html" frameborder="0" style="width: 100%; height: 100%; z-index: 1001;"></iframe>
+          <div class="who-hero__actions" data-aos="fade-up" data-aos-delay="100">
+            <a href="#team" class="who-hero__btn who-hero__btn--primary">Meet the Lab <span aria-hidden="true">↓</span></a>
+            <a href="research.html#features" class="who-hero__btn who-hero__btn--ghost">See our research</a>
+          </div>
+
+          <!-- 
+          <nav class="who-hero__regions" aria-label="Where we work" data-aos="fade-up" data-aos-delay="200">
+            <span class="who-hero__regions-label">Where we work</span>
+            <div class="who-hero__region-list">
+              <a href="research.html#features" class="who-hero__region">Greater Yellowstone Ecosystem</a>
+              <a  class="who-hero__region">Wyoming</a>
+              <a class="who-hero__region">Montana</a>
+              <a class="who-hero__region">Canadian Rockies</a>
             </div>
-    
-            <div class="carousel-content" style="position: relative;">
-            </div>
-    
-            <div class="custom-box">
-              <div class = "info1">
-
-                <h2>Who We Are</h2>
-                <p data-aos="fade-up">We are a dynamic ensemble of dedicated individuals, including research scientists, postdocs, graduate students, and undergraduate students. We are all interested in understanding how ecosystems work, in conserving wildlife, habitat, and intact landscapes, and in working with a variety of great partners.  </p>
-                  <p data-aos="fade-up">Interact with the map to see the lab's active projects.</p>
-                  <a data-aos="fade-up" data-aos-delay="200" href="#team" class="btn-get-started">Meet the Lab  <span>↓</span></a>
-                </div>
-
-                </div>
+          </nav> -->
         </div>
-    </div>
-    
-    </section> 
+      </div>
+
+      <p class="who-hero__credit">
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.5" y="4" width="13" height="9.5" rx="2"/><circle cx="8" cy="8.75" r="2.5"/><path d="M5.5 4l1-2h3l1 2"/></svg>
+        Photo: Ashley Townsend
+      </p>
+    </section>
   
     
     <!-- ====== Team Section ======= -->
 
-    <div class="container" id="team">
-      <div class="section-header" style="padding:100px;">
-        <h2 style="font-size: 38px; font-weight: 700;">Our Lab</h2>
+    <section class="lab-section" id="team">
+      <div class="container">
+        <div class="lab-header">
+          <p class="lab-eyebrow">Meet the lab</p>
+          <h2 class="lab-heading">Our Lab</h2>
+          <p class="lab-intro">Research scientists, postdocs, and students working on wildlife movement, habitat and conservation. Select a researcher to read their story.</p>
+        </div>
+        <div class="lab-grid" id="teamList"></div>
       </div>
-      <div class="row" id="teamList"></div>
-    </div>
+    </section>
 
-    <!-- Popup container -->
     <div id="popupContainer"></div>
       <!--- ========= End of Team Section ======== -->
 
     <!-- ======= Join Us Section ======= -->
-    <section id="join-us" class="alt-services section-bg">
-      <div class="container" data-aos="fade-up">
+    <section id="join-us" class="join-section">
+      <div class="container">
 
-        <div class="row justify-content-around gy-2">
-          <div class="col-lg-5 d-flex flex-column justify-content-center">
-            <h3>Join Us</h3>
-            <p>
-              Students within the Merkle Research Group are expected to develop and apply theoretical concepts in ecology while also contributing to wildlife conservation and management. Students are also expected to participate in a team environment, present results at professional conferences and agency meetings, publish results in a timely manner in peer-reviewed scientific outlets, and assist with preparation of grant proposals.
- 
-            </p>
+        <div class="join-header">
+          <p class="lab-eyebrow">Join us</p>
+          <h2 class="lab-heading">Work with us</h2>
+          <p class="lab-intro">Students and staff in the Merkle Research Group develop and apply theoretical concepts in ecology while contributing to wildlife conservation and management, as part of a collaborative team.</p>
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
-              <div>
-                <p>
-                  Prospective students with experience conducting and publishing research, working in GIS, and managing and analyzing large datasets in program R are especially encouraged to inquire.
-                  Please email Dr. Jerod Merkle for more information.</p>
-                  <br>
-                  <p>
-                    *Read the Merkle Research Group’s Vision, Philosophy, Policies, and Expectations <a href = "assets/docs/Merkle_LabVision_July2024.pdf">here.</a>
+        </div>
 
-                  </p>
-                  <br>
-                  <p>
-                  *Each student in the Merkle Research Group develops a mentoring plan and updates it biannually. The mentoring plan rubric is <a href ="assets/docs/Merkle_MentoringPlan_rubric.docx">here</a>.
-                </p>
-                </div>
+        <figure class="join-photos">
+          <div class="join-photos__grid">
+            <div class="join-photos__main">
+              <img src="assets/img/team_photo.jpg" alt="Merkle Research Group members" loading="lazy" decoding="async">
             </div>
-
-
+            <div class="join-photos__side">
+              <div class="join-photos__item"><img src="assets/img/Fence_pull_20260621.JPEG" alt="" loading="lazy" decoding="async"></div>
+              <div class="join-photos__item"><img src="assets/img/ATDec24_17.jpg" alt="" loading="lazy" decoding="async"></div>
+            </div>
           </div>
+          <figcaption></figcaption>
+        </figure>
 
-          <div class="col-lg-3 img-bg" style="background-image: url(assets/img/team_photo.jpg);"  data-aos-delay="100"></div>
+        <div class="join-panels">
+          <div class="join-panel">
+            <h3>What our students do</h3>
+            <p>Students within the Merkle Research Group are expected to develop and apply theoretical concepts in ecology while also contributing to wildlife conservation and management. Students are also expected to participate in a team environment, present results at professional conferences and agency meetings, publish results in a timely manner in peer-reviewed scientific outlets, and assist with preparation of grant proposals.</p>
+          </div>
+          <div class="join-panel">
+            <h3>Prospective students</h3>
+            <p>Prospective students with experience conducting and publishing research, working in GIS, and managing and analyzing large datasets in program R are especially encouraged to inquire. Please email Dr. Jerod Merkle for more information.</p>
+          </div>
+        </div>
+
+        <div class="join-docs">
+          <a class="join-doc" href="assets/docs/Merkle_LabVision_July2024.pdf" target="_blank" rel="noopener">
+            <span class="join-doc__icon join-doc__icon--rust" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2.5h8l4.5 4.5v14.5H6z"/><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6"/></svg>
+            </span>
+            <span class="join-doc__text">
+              <strong>Lab vision, philosophy, policies &amp; expectations</strong>
+              <span>PDF · read before reaching out</span>
+            </span>
+            <span class="join-doc__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="join-doc" href="assets/docs/Merkle_MentoringPlan_rubric.docx">
+            <span class="join-doc__icon join-doc__icon--sage" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            </span>
+            <span class="join-doc__text">
+              <strong>Mentoring plan rubric</strong>
+              <span>Word doc · each student updates a plan twice a year</span>
+            </span>
+            <span class="join-doc__arrow" aria-hidden="true">→</span>
+          </a>
         </div>
 
       </div>
-    </section><!-- End Alt Services Section 2 -->
+    </section><!-- End Join Us Section -->
 
 
      <!-- 
@@ -188,24 +220,27 @@
 -->
 
       <!-- ====== Lab Alumni Section ====== -->
-      <div class="container" id="lab-alumni">
-      <div class="section-header" style="padding:100px;">
-      <h2 style="font-size: 38px; font-weight: 700;">Lab Alumni</h2>
-      </div>
-      <div class="row" id="alumniList"></div>
-      </div>
-
-
-      <!-- Popup container -->
-      <div id="alumniPopupContainer"></div>
-
-
-
+      <section class="lab-section" id="lab-alumni">
+        <div class="container">
+          <div class="lab-header">
+            <p class="lab-eyebrow">Former members</p>
+            <h2 class="lab-heading">Lab Alumni</h2>
+            <p class="lab-intro">Former students, postdocs and staff.</p>
+          </div>
+          <div class="lab-grid" id="alumniList"></div>
+        </div>
+      </section>
 
 
 
 
-    <!-- ======= Current Openings Sections ======= -->
+
+
+
+    <!-- ======= Current Openings (hidden) =======
+         Openings now show as one line in the Join Us section above.
+         The old section is kept below, switched off, in case you want it back.
+    <!~~ ======= Current Openings Sections ======= ~~>
     <section id="current-openings" class="current-openings section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -217,7 +252,7 @@
 
       <div class="row gy-5">
         <p> No openings at this time.</p>
-<!--
+<!~~
         <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="post-item position-relative h-100">
 
@@ -247,13 +282,14 @@
             </div>
 
           </div>
-        </div> --> <!-- End post item -->
+        </div> 
 
       </div>
 
       </div>
     </section>
-    <!-- End Current Openings Section -->
+
+    ======= End Current Openings ======= -->
     <footer id="footer" class="footer" style="opacity: 0.5; background: transparent; color: #aaa; ">
       <div class="footer-legal text-center">
         <div class="container">
@@ -270,14 +306,19 @@
 
   <div id="preloader"></div>
   <script>
-    window.addEventListener('scroll', function() {
+    (function () {
       const footer = document.getElementById('footer');
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        footer.classList.add('visible');
-      } else {
-        footer.classList.remove('visible');
-      }
-    });
+      let ticking = false;
+      window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () {
+          const atBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2;
+          footer.classList.toggle('visible', atBottom);
+          ticking = false;
+        });
+      }, { passive: true });
+    })();
     
   </script>
   <!-- Vendor JS Files -->
